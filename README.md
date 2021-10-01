@@ -2,8 +2,6 @@
 
 wine for macOS
 
-<u>简体中文</u>｜[English](https://github.com/Cat-owen/wineformacOS/blob/main/README.md)
-
 ## 简介
 
 本仓库并非wine官方仓库，为为支持wine在macOS10.15以及更远的版本中使用，定期从wine官方源码包中编译打包
