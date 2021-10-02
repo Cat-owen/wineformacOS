@@ -17,7 +17,7 @@ jobs:
     - name: install brew
       run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     - name: install bison
-      run: brew install bison
+      run: brew install --formula bison
     - name: bison path
       run: export PATH="/usr/local/opt/bison/bin:$PATH" >> /Users/runner/.bash_profile
     - name: bison ex
