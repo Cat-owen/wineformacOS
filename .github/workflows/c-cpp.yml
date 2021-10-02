@@ -16,7 +16,7 @@ jobs:
     - name: tar xvf
       run: tar xvf wine.tar.xz
     - name: cd wine
-      run: cd ./wine-6.18
+      run: cd wine-6.18
     - name: ls
       run: ls
     - name: configure
