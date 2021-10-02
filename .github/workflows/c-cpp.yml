@@ -17,12 +17,8 @@ jobs:
       run: tar xvf wine.tar.xz
     - name: cd wine
       run: cd ./wine-6.18
-    - name: mkdir build
-      run: mkdir build
-    - name: cd
-      run: cd ./build
     - name: configure
-      run: ../configure -mingw64
+      run: ./configure -mingw64
     - name: make
       run: make -j8
     - name: make install
