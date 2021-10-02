@@ -6,10 +6,6 @@ on:
   pull_request:
     branches: [ main ]
 
-steps:
-  - name: Display the path
-    run: echo $PATH
-    shell: bash
 
 jobs:
   build:
@@ -18,10 +14,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: install ports
-      run: sudo installer -pkg MacPorts.pkg -target /
+    - name: install brew
+      run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     - name: install bison
-      run: port install rdepof:wine-devel +universal +x11
+      run: sudo brew install bison
     - name: tar xvf
       run: tar xvf wine.tar.xz
     - name: cd wine
