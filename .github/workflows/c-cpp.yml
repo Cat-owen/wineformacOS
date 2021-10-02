@@ -13,6 +13,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: tar xvf
+      run: tar xvf wine.tar.xz
+    - name: cd wine
+      run: cd ./wine-6.18
     - name: mkdir build
       run: mkdir build
     - name: cd
