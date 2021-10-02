@@ -17,7 +17,7 @@ jobs:
     - name: install brew
       run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     - name: install bison
-      run: sudo brew install bison
+      run: brew install bison
     - name: tar xvf
       run: tar xvf wine.tar.xz
     - name: cd wine
@@ -27,6 +27,6 @@ jobs:
     - name: configure
       run: cd wine-6.18 && ./configure --enable-win64
     - name: make
-      run: make -j8
+      run: make
     - name: make install
       run: make install
