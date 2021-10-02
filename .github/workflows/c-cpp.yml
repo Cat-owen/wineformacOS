@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [ main ]
 
+steps:
+  - name: Display the path
+    run: echo $PATH
+    shell: bash
+
 jobs:
   build:
 
