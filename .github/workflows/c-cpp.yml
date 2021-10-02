@@ -20,7 +20,7 @@ jobs:
     - name: ls
       run: ls
     - name: configure
-      run: cd wine-6.18 && ./configure --help
+      run: cd wine-6.18 && ./configure --enable-win64
     - name: make
       run: make -j8
     - name: make install
