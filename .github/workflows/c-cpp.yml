@@ -19,7 +19,7 @@ jobs:
     - name: install bison
       run: brew install bison
     - name: bison path
-      run: echo 'export PATH="/usr/local/opt/bison/bin:$PATH"' >> /Users/runner/.bash_profile
+      run: export PATH="/usr/local/opt/bison/bin:$PATH"' >> /Users/runner/.bash_profile
     - name: tar xvf
       run: tar xvf wine.tar.xz
     - name: cd wine
