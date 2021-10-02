@@ -1,0 +1,25 @@
+name: Wine for macOS
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: macos-11
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: mkdir build
+    - run: mkdir build
+    - name: cd
+    - run: cd ./build
+    - name: configure
+      run: ../configure -mingw64
+    - name: make
+      run: make -j8
+    - name: make install
+      run: make install
