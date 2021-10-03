@@ -22,6 +22,8 @@ jobs:
       run: export PATH="/usr/local/opt/bison/bin:$PATH" >> /Users/runner/.bash_profile
     - name: bison ex
       run: export LDFLAGS="-L/usr/local/opt/bison/lib"
+    - name: excising
+      run: brew unlink bison && echo ‘export PATH="/usr/local/opt/bison/bin:$PATH"’ >> ~/.bash_profile && export LDFLAGS="-L/usr/local/opt/bison/lib" && source ~/.bash_profile && brew link bison --force
     - name: tar xvf
       run: tar xvf wine.tar.xz
     - name: cd wine
