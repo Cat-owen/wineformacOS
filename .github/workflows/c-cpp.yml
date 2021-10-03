@@ -30,6 +30,10 @@ jobs:
       run: cd wine-6.18
     - name: ls
       run: ls
+    - name: install ports
+      run： sudo installer -pkg MacPorts.pkg -target /
+    - name: install bison 3
+      run: port install bison
     - name: configure
       run: cd wine-6.18 && ./configure --enable-win64
     - name: make
